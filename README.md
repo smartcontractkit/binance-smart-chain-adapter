@@ -2,14 +2,18 @@
 
 This adapter is built to fulfill Chainlink oracle requests.
 
+## Configuration
+
+The adapter uses the following environment variables:
+
+- `URL`: A URL to a JSON-RPC (HTTP or WS) node on Binance Smart Chain
+- `PRIVATE_KEY`: The private key to sign transactions with. Must have fulfillment permissions on the Oracle contract.
+
 ## Input Params
 
-- `address` or `exAddr`: The oracle contract to fulfill the request on
-- `request_id` or `requestId`: The request id
-- `payment`: Payment amount
-- `callback_address` or `callbackAddress`: The callback/requesting address
-- `callback_function_id` or `callbackFunctionId`: The callback function id
-- `expiration` or `exp`: The request expiration time
+- `address` or `bscAddress`: The oracle contract to fulfill the request on
+- `dataPrefix` or `dataPrefix`: The data prefix in the request
+- `functionSelector` or `bscFunctionSelector`: The fulfillment function selector
 - `result` or `value`: The value to fulfill the request with
 
 ## Output
@@ -18,9 +22,9 @@ This adapter is built to fulfill Chainlink oracle requests.
 {
     "jobRunID": "test123",
     "data": {
-        "result": "0xb3a9e9b72b080ad60a871ff9549caf5176c00d7358680bc81aa808d680dcede0"
+        "result": "0x560d6081e276e1c3c1e58aba722ab2848315442a196fcc89a13baa8bc7e34a78"
     },
-    "result": "0xb3a9e9b72b080ad60a871ff9549caf5176c00d7358680bc81aa808d680dcede0",
+    "result": "0x560d6081e276e1c3c1e58aba722ab2848315442a196fcc89a13baa8bc7e34a78",
     "statusCode": 200
 }
 ```
