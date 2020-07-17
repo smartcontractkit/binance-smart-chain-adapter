@@ -6,7 +6,7 @@ This adapter is built to fulfill Chainlink oracle requests.
 
 The adapter uses the following environment variables:
 
-- `URL`: A URL to a JSON-RPC (HTTP or WS) node on Binance Smart Chain
+- `URL`: A URL to a JSON-RPC (HTTP RPC) node on Binance Smart Chain
 - `PRIVATE_KEY`: The private key to sign transactions with. Must have fulfillment permissions on the Oracle contract.
 
 ## Input Params
